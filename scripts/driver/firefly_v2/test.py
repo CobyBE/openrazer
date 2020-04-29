@@ -115,12 +115,12 @@ if __name__ == '__main__':
 
         if not args.skip_custom:
             # Custom LEDs all rows
-            payload_all = b'\x00\x00\x0E'
-            for i in range(0, 15):  # 15 colours 0x00-0x0E
+            payload_all = b'\x00\x00\x12'
+            for i in range(0, 19):  # 19 colours 0x00-0x12
                 payload_all += random.choice(COLOURS)
 
             payload_m1_5 = b''
-            for led in (0x00, 0x0E):
+            for led in (0x00, 0x12):
                 led_byte = led.to_bytes(1, byteorder='big')
                 payload_m1_5 += b'\x00' + led_byte + led_byte + b'\xFF\xFF\xFF'
 
