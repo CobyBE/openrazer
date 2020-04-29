@@ -28,24 +28,22 @@ class RazerFirefly(__RazerDeviceBrightnessSuspend):
 
 class RazerFireflyV2(__RazerDeviceBrightnessSuspend):
     """
-    Class for the Razer Firefly Hyperflux (2018)
+    Class for the Razer Firefly V2 (2019)
     """
     USB_VID = 0x1532
     USB_PID = 0x0C04
     HAS_MATRIX = True
-    MATRIX_DIMS = [1, 1]
-    METHODS = ['get_device_type_mousemat', 'set_static_effect', 'set_spectrum_effect',
+    MATRIX_DIMS = [1, 19]
+    METHODS = ['get_device_type_mousemat', 'set_wave_effect', 'set_static_effect', 'set_spectrum_effect',
                'set_none_effect', 'set_breath_random_effect', 'set_breath_single_effect', 'set_breath_dual_effect',
-               'set_key_row']
+               'set_custom_effect', 'set_key_row', 'trigger_reactive_effect']
 
-    # todo get correct images
-    DEVICE_IMAGE = "https://assets.razerzone.com/eeimages/support/products/594/594_firefly_500x500.png"
+    DEVICE_IMAGE = "https://d4kkpd69xt9l7.cloudfront.net/sys-master/images/h2d/h31/9296178249758/Firefly-V2-Base.png_300Wx300H"
 
-    # Deprecated - RAZER_URLS be removed in future.
     RAZER_URLS = {
-        "top_img": "https://assets.razerzone.com/eeimages/support/products/594/594_firefly_500x500.png",
-        "side_img": "https://assets.razerzone.com/eeimages/products/21936/fireflycloth-gallery-6.png",
-        "perspective_img": "https://assets.razerzone.com/eeimages/products/21936/fireflycloth-gallery-3.png"
+        "top_img": "https://d4kkpd69xt9l7.cloudfront.net/sys-master/images/h2d/h31/9296178249758/Firefly-V2-Base.png_300Wx300H",
+        "side_img": "https://d4kkpd69xt9l7.cloudfront.net/sys-master/images/h2d/h31/9296178249758/Firefly-V2-Base.png_300Wx300H",
+        "perspective_img": "https://d4kkpd69xt9l7.cloudfront.net/sys-master/images/h2d/h31/9296178249758/Firefly-V2-Base.png_300Wx300H"
     }
 
 

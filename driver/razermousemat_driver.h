@@ -20,6 +20,8 @@
 #define RAZER_MOUSEMAT_WAIT_MIN_US 900
 #define RAZER_MOUSEMAT_WAIT_MAX_US 1000
 
+#define RAZER_FIREFLY_V2_INTERFACE_PROTOCOL 0
+
 struct razer_mousemat_device {
     struct usb_device *usbdev;
     struct hid_device *hiddev;

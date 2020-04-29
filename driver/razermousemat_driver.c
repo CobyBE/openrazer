@@ -660,11 +660,11 @@ static int razer_mousemat_probe(struct hid_device *hdev, const struct hid_device
         goto exit;
     }
 
-    if(intf->cur_altsetting->desc.bInterfaceProtocol == USB_INTERFACE_PROTOCOL_MOUSE) {
+    if(intf->cur_altsetting->desc.bInterfaceProtocol == USB_INTERFACE_PROTOCOL_MOUSE
+            || intf->cur_altsetting->desc.bInterfaceProtocol == RAZER_FIREFLY_V2_INTERFACE_PROTOCOL) {
 
         switch(usb_dev->descriptor.idProduct) {
         case USB_DEVICE_ID_RAZER_FIREFLY_HYPERFLUX:
-        case USB_DEVICE_ID_RAZER_FIREFLY_V2:
         case USB_DEVICE_ID_RAZER_GOLIATHUS_CHROMA:
         case USB_DEVICE_ID_RAZER_GOLIATHUS_CHROMA_EXTENDED:
             CREATE_DEVICE_FILE(&hdev->dev, &dev_attr_version);
@@ -742,11 +742,11 @@ static void razer_mousemat_disconnect(struct hid_device *hdev)
 
     dev = hid_get_drvdata(hdev);
 
-    if(intf->cur_altsetting->desc.bInterfaceProtocol == USB_INTERFACE_PROTOCOL_MOUSE) {
+    if(intf->cur_altsetting->desc.bInterfaceProtocol == USB_INTERFACE_PROTOCOL_MOUSE
+            || intf->cur_altsetting->desc.bInterfaceProtocol == RAZER_FIREFLY_V2_INTERFACE_PROTOCOL) {
 
         switch(usb_dev->descriptor.idProduct) {
         case USB_DEVICE_ID_RAZER_FIREFLY_HYPERFLUX:
-        case USB_DEVICE_ID_RAZER_FIREFLY_V2:
         case USB_DEVICE_ID_RAZER_GOLIATHUS_CHROMA:
         case USB_DEVICE_ID_RAZER_GOLIATHUS_CHROMA_EXTENDED:
             device_remove_file(&hdev->dev, &dev_attr_version);
