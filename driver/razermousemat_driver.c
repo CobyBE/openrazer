@@ -661,7 +661,7 @@ static int razer_mousemat_probe(struct hid_device *hdev, const struct hid_device
     }
 
     if(intf->cur_altsetting->desc.bInterfaceProtocol == USB_INTERFACE_PROTOCOL_MOUSE
-            || intf->cur_altsetting->desc.bInterfaceProtocol == RAZER_FIREFLY_V2_INTERFACE_PROTOCOL) {
+       || intf->cur_altsetting->desc.bInterfaceProtocol == RAZER_FIREFLY_V2_INTERFACE_PROTOCOL) {
 
         switch(usb_dev->descriptor.idProduct) {
         case USB_DEVICE_ID_RAZER_FIREFLY_HYPERFLUX:
@@ -743,7 +743,7 @@ static void razer_mousemat_disconnect(struct hid_device *hdev)
     dev = hid_get_drvdata(hdev);
 
     if(intf->cur_altsetting->desc.bInterfaceProtocol == USB_INTERFACE_PROTOCOL_MOUSE
-            || intf->cur_altsetting->desc.bInterfaceProtocol == RAZER_FIREFLY_V2_INTERFACE_PROTOCOL) {
+       || intf->cur_altsetting->desc.bInterfaceProtocol == RAZER_FIREFLY_V2_INTERFACE_PROTOCOL) {
 
         switch(usb_dev->descriptor.idProduct) {
         case USB_DEVICE_ID_RAZER_FIREFLY_HYPERFLUX:
