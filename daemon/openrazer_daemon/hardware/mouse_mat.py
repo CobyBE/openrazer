@@ -38,12 +38,10 @@ class RazerFireflyV2(__RazerDeviceBrightnessSuspend):
                'set_none_effect', 'set_breath_random_effect', 'set_breath_single_effect', 'set_breath_dual_effect',
                'set_custom_effect', 'set_key_row', 'trigger_reactive_effect']
 
-    DEVICE_IMAGE = "https://d4kkpd69xt9l7.cloudfront.net/sys-master/images/h2d/h31/9296178249758/Firefly-V2-Base.png_300Wx300H"
+    DEVICE_IMAGE = "https://assets.razerzone.com/eeimages/support/products/1594/1594_firefly_v2.png"
 
     RAZER_URLS = {
-        "top_img": "https://d4kkpd69xt9l7.cloudfront.net/sys-master/images/h2d/h31/9296178249758/Firefly-V2-Base.png_300Wx300H",
-        "side_img": "https://d4kkpd69xt9l7.cloudfront.net/sys-master/images/h2d/h31/9296178249758/Firefly-V2-Base.png_300Wx300H",
-        "perspective_img": "https://d4kkpd69xt9l7.cloudfront.net/sys-master/images/h2d/h31/9296178249758/Firefly-V2-Base.png_300Wx300H"
+        "top_img": "https://assets.razerzone.com/eeimages/support/products/1594/1594_firefly_v2.png"
     }
 
 
