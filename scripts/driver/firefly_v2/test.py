@@ -137,4 +137,4 @@ if __name__ == '__main__':
         print("Finished")
 
     if not found_chroma:
-        print("No Fireflies found")
+        print("No Fireflies V2 found")
