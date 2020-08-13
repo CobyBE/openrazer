@@ -761,7 +761,7 @@ static void razer_mousemat_disconnect(struct hid_device *hdev)
         expected_protocol = USB_INTERFACE_PROTOCOL_MOUSE;
         break;
     case USB_DEVICE_ID_RAZER_FIREFLY_V2:
-        expected_protocol = RAZER_FIREFLY_V2_INTERFACE_PROTOCOL;
+        expected_protocol = 0;
         break;
     }
 
