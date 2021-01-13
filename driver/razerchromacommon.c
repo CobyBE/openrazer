@@ -1090,7 +1090,7 @@ struct razer_report razer_chroma_misc_get_dpi_xy(unsigned char variable_storage)
 {
     struct razer_report report = get_razer_report(0x04, 0x85, 0x07);
 
-    report.arguments[0] = VARSTORE;
+    report.arguments[0] = variable_storage;
 
     return report;
 }
@@ -1120,6 +1120,14 @@ struct razer_report razer_chroma_misc_get_dpi_xy_byte(void)
 }
 
 /**
+ * Get device idle time
+ */
+struct razer_report razer_chroma_misc_get_idle_time(void)
+{
+    return get_razer_report(0x07, 0x83, 0x02);
+}
+
+/**
  * Set device idle time
  *
  * Device will go into powersave after this time.
@@ -1137,6 +1145,14 @@ struct razer_report razer_chroma_misc_set_idle_time(unsigned short idle_time)
     report.arguments[1] = idle_time & 0x00FF;
 
     return report;
+}
+
+/**
+ * Get low battery threshold
+ */
+struct razer_report razer_chroma_misc_get_low_battery_threshold(void)
+{
+    return get_razer_report(0x07, 0x81, 0x01);
 }
 
 /**

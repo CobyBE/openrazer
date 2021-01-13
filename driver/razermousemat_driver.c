@@ -655,12 +655,6 @@ static int razer_mousemat_probe(struct hid_device *hdev, const struct hid_device
     unsigned char expected_protocol = USB_INTERFACE_PROTOCOL_MOUSE;
 
     switch(usb_dev->descriptor.idProduct) {
-    case USB_DEVICE_ID_RAZER_FIREFLY_HYPERFLUX:
-    case USB_DEVICE_ID_RAZER_FIREFLY:
-    case USB_DEVICE_ID_RAZER_GOLIATHUS_CHROMA:
-    case USB_DEVICE_ID_RAZER_GOLIATHUS_CHROMA_EXTENDED:
-        expected_protocol = USB_INTERFACE_PROTOCOL_MOUSE;
-        break;
     case USB_DEVICE_ID_RAZER_FIREFLY_V2:
         expected_protocol = 0;
         break;
@@ -754,12 +748,6 @@ static void razer_mousemat_disconnect(struct hid_device *hdev)
     unsigned char expected_protocol = USB_INTERFACE_PROTOCOL_MOUSE;
 
     switch(usb_dev->descriptor.idProduct) {
-    case USB_DEVICE_ID_RAZER_FIREFLY_HYPERFLUX:
-    case USB_DEVICE_ID_RAZER_FIREFLY:
-    case USB_DEVICE_ID_RAZER_GOLIATHUS_CHROMA:
-    case USB_DEVICE_ID_RAZER_GOLIATHUS_CHROMA_EXTENDED:
-        expected_protocol = USB_INTERFACE_PROTOCOL_MOUSE;
-        break;
     case USB_DEVICE_ID_RAZER_FIREFLY_V2:
         expected_protocol = 0;
         break;
